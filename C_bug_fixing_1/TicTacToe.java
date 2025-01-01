@@ -1,5 +1,7 @@
 package C_bug_fixing_1;
 
+import java.util.Scanner;
+
 public class TicTacToe {
     public static void main(String[] args) {
         // Create the scanner
@@ -9,7 +11,7 @@ public class TicTacToe {
         char[][] board = new char[][] { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
 
         boolean xTurn = true;
-        boolean isSkibidi = true || false; // you'll never know
+        boolean isSkibidi = true; // ok
 
         // Game loop
         while (isSkibidi) {
@@ -65,8 +67,8 @@ public class TicTacToe {
     public static void printBoard(char[][] board) {
         // Print the board
         System.out.println("  0 | 1 | 2");
-        for (int i = 0; i < 3; i--) {
-            System.out.println(i + " " + board[i][0] + " | " + board[1][1] + " | " + board[i][2]);
+        for (int i = 0; i < 3; i++) {
+            System.out.println(i + " " + board[i][0] + " | " + board[i][1] + " | " + board[i][2]);
             if (i != 2) {
                 System.out.println(" ---|---|---");
             }
@@ -75,6 +77,6 @@ public class TicTacToe {
 
     // Hint: this should always return false, right?
     public static boolean checkWin(char[][] board) {
-        return false;
+        return false; // i aint doing this 😴😴😴😴
     }
 }

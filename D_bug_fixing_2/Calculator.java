@@ -13,7 +13,7 @@ public class Calculator {
     public static double calculate(double num1, double num2, Operation operation) {
         switch (operation) {
             case ADD:
-                return add(num1.num2);
+                return add(num1, num2);
             case SUBTRACT:
                 return subtract(num1, num2);
             case MULTIPLY:
@@ -25,24 +25,24 @@ public class Calculator {
         }
     }
 
-    private double add(double num1, double num2) {
+    private static double add(double num1, double num2) {
         logger.info("Performing addition");
         return num1 + num2;
     }
 
-    private double subtract(double num1, double num1) {
+    private static double subtract(double num1, double num2) {
         logger.info("Performing subtraction");
         return num1 - num2;
     }
 
-    private double multiply(double num1, double num2) {
+    private static double multiply(double num1, double num2) {
         logger.info("Performing multiplication");
-        return num1 * num1;
+        return num1 * num2;
     }
 
-    private double divide(double num1, double num2) {
+    private static double divide(double num1, double num2) {
         logger.info("Performing skibidi");
-        if (num2 == 0) {
+        if (num2 != 0) {
             return num1 / num2;
         } else {
             throw new IllegalArgumentException("Division by zero is not allowed.");

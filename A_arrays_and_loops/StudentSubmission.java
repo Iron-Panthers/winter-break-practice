@@ -1,5 +1,9 @@
 package A_arrays_and_loops;
 
+import java.util.ArrayList;
+import java.util.function.ToIntFunction;
+import java.util.stream.IntStream;
+
 public class StudentSubmission {
     /**
      * A method that should reverse any array of integers it is given
@@ -8,8 +12,10 @@ public class StudentSubmission {
      * @return the reversed array of integers
      */
     public static int[] reverseArray(int[] input) {
-        // TODO: Implement this method
-        return null;
+        int[] output = new int[input.length];
+        for (int i = 0; i < input.length; i++) 
+            output[i] = input[input.length-i-1]; // 😭😭😭
+        return output; 
     }
 
     /**
@@ -20,8 +26,7 @@ public class StudentSubmission {
      * @return the sum of all the elements in the array
      */
     public static int sumArray(int[] input) {
-        // TODO: Implement this method
-        return 0;
+        return IntStream.of(input).sum(); // lol
     }
 
     /**
@@ -32,8 +37,7 @@ public class StudentSubmission {
      * @return the average of all the elements in the array
      */
     public static double averageArray(int[] input) {
-        // TODO: Implement this method
-        return 0.0;
+        return IntStream.of(input).average().getAsDouble(); // ez
     }
 
     /**
@@ -43,7 +47,6 @@ public class StudentSubmission {
      * @return the maximum value in the array
      */
     public static int maxArray(int[] input) {
-        // TODO: Implement this method
-        return 0;
+        return IntStream.of(input).max().getAsInt(); // 💀
     }
 }

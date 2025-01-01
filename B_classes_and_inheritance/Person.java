@@ -1,23 +1,99 @@
 package B_classes_and_inheritance;
 
-public class Person {
-    // TODO: Make it so that Person cannot be instantiated (hint: there is a special
-    // keyword for this)
-    public String name;
-    public int age;
-    public double height;// Stored in inches
-    public double weight;// Stored in pounds
-    public Jobs job;// this shouldn't work yet
+public abstract class Person {
+    private String name;
+    private int age;
+    private double height; // Stored in inches
+    private double weight; // Stored in pounds
+    private Jobs job;
 
-    // TODO: Add an enum for the jobs
+    public Person() {
+        name = "Bruce";
+        age = 69;
+        height = -5;
+        weight = -1;
+        job = Jobs.BRUCE;
+    }
 
-    // TODO: Add a zero arg constructor (you can look this up)
-    // TODO: Add a constructor that takes in all the fields (multi-arg constructor)
+    public Person(String name, int age, double height, double weight, Jobs job) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.job = job;
+    }
 
-    // TODO: Add a method that returns the BMI of the person (hint: BMI = weight /
-    // height^2 * 703)
+    public enum Jobs {
+        DEV,
+        BRUCE,
+        BRYAN_SHIPPER/*💘*/
+    }
+    
+    public double GetBMI() {
+        return weight * Math.pow(height, 2) * 704;
+    }
 
-    // TODO: ENCAPSULATE ALL THE FIELDS - you can look this one up too
+    public String getName() {
+        return name;
+    }
 
-    // TODO: Add a toString method for the person (have fun with this one)
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public Jobs getJob() {
+        return job;
+    }
+
+    public void setJob(Jobs job) {
+        this.job = job;
+    }
+
+    // THank you source actions 🙏🙏🙏🙏
+
+    public String toString() {
+        return "im not having fun with this one";
+    }
+
+    public void greet() {
+        System.out.println("Hello, my name is {name}");
+    }
+
+    public void die() {
+        kill(this); // suicide?
+    }
+
+    public static void kill(Person victim) {
+        victim.age = 0;
+        victim.height = 0;
+        victim.weight = 0;
+        victim.job = null;
+        victim.name = null;
+
+        System.gc(); // ik this technically doesnt do anything but it kinda funny
+    }
 }

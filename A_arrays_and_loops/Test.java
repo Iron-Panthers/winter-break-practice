@@ -6,7 +6,7 @@ import java.util.Dictionary;
 public class Test {
     // If you're looking at this, I know the code is a bit scuffed.
     // I don't really care about your opinion on it, I just want to get the job
-    // done.
+    // done. 💀💀
     // Run it to see if your code works.
     // Thanks
 
